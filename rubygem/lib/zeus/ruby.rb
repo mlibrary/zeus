@@ -107,6 +107,7 @@ module Zeus
       # then "zeus test/rspec/testrb" without arguments runs the
       # RSpec suite by default.
       if using_rspec?(argv)
+        require 'rspec'
         RSpec.configuration.start_time = Time.now
         ARGV.replace(argv)
         # if no directory is given, run the default spec directory
